@@ -52,21 +52,21 @@ export default function Hero({ scrollToSection }) {
         </div>
 
         {/* Key Highlights Bar */}
-        <div className="pt-8 mt-8 border-t border-white/25 grid grid-cols-3 gap-4 max-w-xl mx-auto">
+        <div className="pt-8 mt-8 border-t border-white/25 grid grid-cols-3 gap-3 max-w-xl mx-auto">
           <div>
-            <p className="text-2xl font-black text-white">24/7</p>
+            <p className="sm:not-last-of-type:text-2xl text-lg font-black text-white">24/7</p>
             <p className="text-xs text-stone-200 font-medium mt-0.5">
               Care Available
             </p>
           </div>
           <div>
-            <p className="text-2xl font-black text-white">UK 15</p>
+            <p className="sm:text-2xl text-sm font-black text-white">UK 15</p>
             <p className="text-xs text-stone-200 font-medium mt-0.5">
               Standards Certified
             </p>
           </div>
           <div>
-            <p className="text-2xl font-black text-white">Port Harcourt</p>
+            <p className="sm:text-2xl text-sm font-black text-white">Port-Harcourt</p>
             <p className="text-xs text-stone-200 font-medium mt-0.5">
               Local Private Support
             </p>

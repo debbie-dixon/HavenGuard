@@ -1,44 +1,38 @@
 import { useState } from "react";
-import { useEffect } from "react";
-import "./App.css";
-import Booking from "./components/Booking";
-import NavBar from "./components/NavBar";
+import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
-import Offers from "./components/Offers";
-import Footer from "./components/Footer";
-import About from "./components/About";
 import Services from "./components/Services";
+import WhyUs from "./components/WhyUs";
 import Contact from "./components/Contact";
-import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
+import "./App.css";
 
-function App() {
-  useEffect(() => {
-    // If a hash exists in the URL on refresh
-    if (window.location.hash) {
-      // Replaces the URL with just the base path (e.g., clears the '#about')
-      window.history.replaceState(null, "", window.location.pathname);
+export default function App() {
+  const [activeSection, setActiveSection] = useState("home");
 
-      // Instantly reset view to top of page
-      window.scrollTo(0, 0);
+  const scrollToSection = (id) => {
+    setActiveSection(id);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }, []);
+  };
+
   return (
-    <>
-      <NavBar />
+    <div className="min-h-screen bg-stone-50 text-stone-800 font-sans antialiased selection:bg-emerald-200 selection:text-emerald-950">
+      <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
 
       <main>
-        <Hero />
-        <Offers />
-        <About />
-        <Services />
-        <Gallery />
-        <Booking />
+        <Hero scrollToSection={scrollToSection} />
+
+        <Services scrollToSection={scrollToSection} />
+
+        <WhyUs />
+
         <Contact />
       </main>
 
-      <Footer />
-    </>
+      <Footer scrollToSection={scrollToSection} />
+    </div>
   );
 }
-
-export default App;

@@ -1,7 +1,7 @@
 import talkingImage from "../assets/talking.jpg";
 import talkingInBedImage from "../assets/arrangingBed.jpg";
 import mobilityAssistanceImage from "../assets/pexels-kampus-7551686.jpg";
-import transportationImage from "../assets/sweeping.jpg";
+import transportationImage from "../assets/Sweeping.jpg";
 import healthMonitoringImage from "../assets/health.jpg";
 import mealAssistanceImage from "../assets/eating.jpg";
 

@@ -1,10 +1,16 @@
-import { FaCouch, FaWalking, FaPills,  FaHandshake, FaStar, FaUtensilSpoon } from "react-icons/fa"
+import talkingImage from "../assets/talking.jpg";
+import talkingInBedImage from "../assets/arrangingBed.jpg";
+import mobilityAssistanceImage from "../assets/pexels-kampus-7551686.jpg";
+import transportationImage from "../assets/sweeping.jpg";
+import healthMonitoringImage from "../assets/health.jpg";
+import mealAssistanceImage from "../assets/eating.jpg";
+
 const SERVICES_LIST = [
   {
     id: "personal-care",
     title: "Personal Care & Hygiene",
     desc: "Bathing, grooming, dressing, and respectful toileting support tailored to client comfort.",
-    icon: <FaCouch />,
+    image: talkingInBedImage,
     bullets: [
       "Assisted Bathing & Showering",
       "Grooming & Oral Hygiene",
@@ -15,7 +21,7 @@ const SERVICES_LIST = [
     id: "safe-mobility",
     title: "Safe Mobility & Physical Transfers",
     desc: "Professional transfer support from bed to wheelchair, preventing falls and ensuring safe ambulation.",
-    icon: <FaWalking />,
+    image: mobilityAssistanceImage,
     bullets: [
       "Bed Transfers & Repositioning",
       "Walking & Ambulation Support",
@@ -26,7 +32,7 @@ const SERVICES_LIST = [
     id: "medication",
     title: "Medication Reminders & Health Monitoring",
     desc: "Timely prescription tracking, vital signs recording, and sugar level monitoring.",
-    icon: <FaPills />,
+    image: healthMonitoringImage,
     bullets: [
       "Exact Schedule Medication Prompts",
       "Blood Pressure & Vital Checks",
@@ -37,7 +43,7 @@ const SERVICES_LIST = [
     id: "meals",
     title: "Nutritious & Therapeutic Meal Preparation",
     desc: "Cooking wholesome, diet-compliant meals and feeding assistance suited to health requirements.",
-    icon: <FaUtensilSpoon />,
+    image: mealAssistanceImage,
     bullets: [
       "Custom Dietary Meal Prep",
       "Hydration Management",
@@ -48,7 +54,7 @@ const SERVICES_LIST = [
     id: "companionship",
     title: "Companionship & Emotional Support",
     desc: "Meaningful engagement, conversation, reading, and mental stimulation to combat isolation.",
-    icon: <FaHandshake />,
+    image: talkingImage,
     bullets: [
       "Engaging Conversation & Reading",
       "Recreational Activities",
@@ -59,7 +65,7 @@ const SERVICES_LIST = [
     id: "housekeeping",
     title: "Light Housekeeping & Infection Control",
     desc: "Maintaining a clean, sanitized, and orderly living space to ensure patient safety and hygiene.",
-    icon: <FaStar />,
+    image: transportationImage,
     bullets: [
       "Sanitizing Living Spaces",
       "Bed Linen Changes",
@@ -92,9 +98,13 @@ export default function Services({ scrollToSection }) {
               className="bg-white border border-stone-200 p-6 hover:border-emerald-300 hover:shadow-lg hover:shadow-emerald-950/5 transition-all duration-300 flex hover:translate-y-1 flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="w-12 h-12 bg-emerald-50 border border-emerald-100 rounded-xl flex items-center justify-center text-2xl">
-                  {service.icon}
-                </div>
+                <img
+                  src={service.image}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  className="h-44 w-full rounded-xl border border-emerald-100 object-cover"
+                />
 
                 <h3 className="text-xl font-bold text-emerald-950 leading-snug">
                   {service.title}

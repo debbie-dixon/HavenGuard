@@ -68,7 +68,7 @@ export default function Contact() {
                     Email Address
                   </p>
                   <p className="text-sm font-bold text-emerald-950">
-                    nehe213@outlook.com
+                    nehemiahparadigm6315@gmail.com
                   </p>
                 </div>
               </div>
